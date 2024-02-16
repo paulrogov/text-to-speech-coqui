@@ -19,6 +19,9 @@ pip install TTS # ~ 8GB of packages
 
 2. Download and launch text-to-speech models (CLI interface)
 ```bash
+# activate the environment
+conda activate coqui-tts
+
 # available coqui models
 tts --list_models
 
