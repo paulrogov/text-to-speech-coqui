@@ -7,7 +7,7 @@ Models:
 Docs:
 * https://docs.coqui.ai/en/latest/inference.html
 
-## Setup and using to synthesize speech 
+## Setup, downloading models and usage (speech synthesis)
 
 1. Install dependencies into a conda environment
 ```bash
@@ -40,16 +40,26 @@ tts --text "Я люблю бананы" \
     --model_name tts_models/multilingual/multi-dataset/xtts_v2 \
     --speaker_wav speech_ru.wav \
     --language_idx ru \
-    --use_cuda true
+    --use_cuda true \
     --out_path "output/xtts2.wav"
 ```
 
-#### Usage variants:  
+#### Location where the models are downloaded
+`~/.local/share/tts`  
+
+<img src="model-location.png">
+
+#### Converting audio file to a `.wav` format for XTTS_v2
+```bash
+ffmpeg -i audio.flac audio.wav
+```
+
+### Usage variants:  
 1. CLI
 2. demo-server (slow)
 3. api (python library)
 
-#### Usage: demo-server
+### Usage: demo-server
 Beware, that CLI inference is faster than this tts-server
 ```bash
 conda activate coqui-tts
