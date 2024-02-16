@@ -37,7 +37,7 @@ tts --text "Many users come to your company website from search engines." \
     --speaker_wav speech_en.wav \
     --language_idx en \
     --use_cuda true \
-    --out_path "output/xtts2.wav"
+    --out_path "output/xtts2--$(date +"%H:%M:%S--%d.%m.%Y).wav"
 
 tts --text "Я люблю бананы" \
     --model_name tts_models/multilingual/multi-dataset/xtts_v2 \
